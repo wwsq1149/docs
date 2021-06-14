@@ -1,0 +1,84 @@
+{
+  "server": [
+    {
+      "itemId": "MTA0LjE5LjExMC4xMjk0NDNhZ2VkLWJyZWFkLTE0M2Mud3dzcS53b3JrZXJzLmRldi8=",
+      "totalUp": 2334292,
+      "totalDown": 162086297,
+      "todayUp": 0,
+      "todayDown": 0,
+      "dateNow": 637592256000000000
+    },
+    {
+      "itemId": "MTA0LjE5LjExMC4xMjk0NDN0aWdodC1icm9vay1jZWNkLnd3c3Eud29ya2Vycy5kZXYv",
+      "totalUp": 0,
+      "totalDown": 0,
+      "todayUp": 0,
+      "todayDown": 0,
+      "dateNow": 637592256000000000
+    },
+    {
+      "itemId": "djJ1czAxLmlzeGEudG9wNDQzL3JheQ==",
+      "totalUp": 18137,
+      "totalDown": 0,
+      "todayUp": 0,
+      "todayDown": 0,
+      "dateNow": 637592256000000000
+    },
+    {
+      "itemId": "d3d3Lmtlcm5lbHMuYmlkNDQzL3dz",
+      "totalUp": 45748,
+      "totalDown": 1689883,
+      "todayUp": 0,
+      "todayDown": 0,
+      "dateNow": 637592256000000000
+    },
+    {
+      "itemId": "MTA0LjE5LjExMC4xMjk0NDN3aW50ZXItc2hhcGUtNTEyZS53d3NxLndvcmtlcnMuZGV2L3dz",
+      "totalUp": 856386,
+      "totalDown": 2993020,
+      "todayUp": 0,
+      "todayDown": 0,
+      "dateNow": 637592256000000000
+    },
+    {
+      "itemId": "MTA0LjE5LjExMC4xMjk0NDNuYW1lbGVzcy1oZWFydC0zM2UwLnd3c3Eud29ya2Vycy5kZXYv",
+      "totalUp": 75491,
+      "totalDown": 537668,
+      "todayUp": 0,
+      "todayDown": 0,
+      "dateNow": 637592256000000000
+    },
+    {
+      "itemId": "MTA0LjE5LjExMC4xMjk0NDN3aW50ZXItc2hhcGUtNTEyZS53d3NxLndvcmtlcnMuZGV2L3JheQ==",
+      "totalUp": 34872,
+      "totalDown": 0,
+      "todayUp": 0,
+      "todayDown": 0,
+      "dateNow": 637592256000000000
+    },
+    {
+      "itemId": "YXV0by5mcmVldjIudG9wNTUyNTE=",
+      "totalUp": 5715,
+      "totalDown": 10600,
+      "todayUp": 0,
+      "todayDown": 0,
+      "dateNow": 637592256000000000
+    },
+    {
+      "itemId": "MTA0LjE5LjExMC4xMjk1NTI1MXdpbnRlci1zaGFwZS01MTJlLnd3c3Eud29ya2Vycy5kZXY=",
+      "totalUp": 0,
+      "totalDown": 0,
+      "todayUp": 0,
+      "todayDown": 0,
+      "dateNow": 637592256000000000
+    },
+    {
+      "itemId": "MTA0LjE5LjExMC4xMjk0NDN1cy53d3NxLndvcmtlcnMuZGV2Lw==",
+      "totalUp": 15517,
+      "totalDown": 56603,
+      "todayUp": 15517,
+      "todayDown": 56603,
+      "dateNow": 637592256000000000
+    }
+  ]
+}

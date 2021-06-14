@@ -1,0 +1,1 @@
+tasklist | findstr /i clash-win64.exe

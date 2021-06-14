@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>❤️ ClashWeb 控制台 ️️❤️</title>
+    <link href="/static/css/style.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>  
+    <div class="container" style="width: 30rem;">
+            <header>
+                <h1>🚀 ClashWeb 控制台 🚁</h1>
+            </header>
+
+            <!-- Proxy tools -->
+        <form method="POST" name = "form1">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <span>{{ message }}</span>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <script type="text/javascript">
+              function traffic()
+              {
+                  var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
+                  httpRequest.open('GET', 'http://127.0.0.1:9090/traffic', true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+                  httpRequest.send();//第三步：发送请求  将请求参数写在URL中
+                  httpRequest.onreadystatechange = function () {
+                      if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                      }
+                      var up = JSON.parse(httpRequest.response)['up'];
+                      var dowm = JSON.parse(httpRequest.response)['down'];
+                      document.getElementById("traffic").innerHTML = '   下载：'+formatBytes(dowm)+' 上传：'+formatBytes(up)
+                      httpRequest.abort();
+                  }
+                  setTimeout("traffic()",1000);
+              }
+              function formatBytes(bytes) {
+                  if(bytes < 1024) return bytes + " B";
+                  else if(bytes < 1048576) return(bytes / 1024).toFixed(2) + " KB";
+                  else if(bytes < 1073741824) return(bytes / 1048576).toFixed(2) + " MB";
+                  else return(bytes / 1073741824).toFixed(2) + " GB";
+              }
+              </script>
+            <div id="traffic" class="card">
+               <script type="text/javascript">traffic();</script>
+            </div>
+            <div class="card"  > 
+                <h2>🤡 订阅管理系统</h2>   
+      
+                </br>
+                <h4>订阅地址</h4>
+                <div class="input-group mb-3">
+                    <input type="text" name="url" class="form-control" placeholder="多个非Clash订阅中间插入：|" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="submit" name = 'submit' value ="订阅转换" id="button-addon2">订阅转换</button>
+                    </div>                    
+                </div>   
+                <div style="text-align:left; vertical-align:left;"> 
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" value="clash" checked>
+                  <label class="custom-control-label" for="customRadioInline1">Clash订阅</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" value="notclash">
+                  <label class="custom-control-label" for="customRadioInline2">非Clash订阅</label>
+                </div>
+                </div>
+                <small id="emailHelp" class="form-text text-muted">【订阅地址】有填写，点击【下载/更新】将下载到指定的配置文件</br>【订阅地址】未填写，点击【下载/更新】将直接更新托管</br>【本地文件】弹出配置文件路径，用以创建新的配置文件或重命名 </small>
+                </br>
+                <h4>配置文件</h4>
+                <div class=input-group mb-3>
+                    <select name="configselect" class="form-control" id="exampleFormControlSelect1">
+                      {% for cate in cates %}
+                      <option>{{cate}}</option>
+                      {% endfor %}
+                    </select>
+                    <button class="btn btn-outline-secondary" type="submit" name = 'submit' value ="查看  配置" id="button-addon2">查看</button>
+                    <button class="btn btn-outline-secondary" type="submit" name = 'submit' value ="更新  配置" id="button-addon2">下载/更新</button>
+                    <button class="btn btn-outline-secondary" type="submit" name = 'submit' value ="打开目录" id="button-addon2">本地文件</button>
+                </div>
+              
+                </br>
+                <div style="text-align:center; vertical-align:middel;">             
+                <input  type="submit" class="btn btn-primary" name= 'submit' value = "返回  主页""/> 
+                <input  type="submit" class="btn btn-primary" name= 'submit' value = "上传 gist""/>     
+                <button type="button" class="btn btn-primary" data-toggle="modal"  data-target="#exampleModal">使用  说明</button>        
+                </div>                       
+                 
+          
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">配置文件系统说明1.2.2</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                      首次使用时，需要在【订阅地址】处填写托管地址。
+                    </br>
+                    </br>
+                      如果您是SSR/SS/VMESS 等非Clash托管地址，您可以点击【订阅转换】或者【节点分组】转换为Clash订阅，或者勾选【非Clash订阅】直接下载默认配置。
+                    </br>
+                    </br>
+                      如果您的机场提供了Clash托管地址，勾选【Clash订阅】并更新。
+                    </br>
+                    </br>
+                      再次使用时，您不需要再次填写托管地址也能更新了，如果您的托管地址发生变化，可以重新输入地址并点击更新配置。
+                    </br>
+                    </br>
+                      当您更新完配置后，点击【重启Clash】就可以重载配置文件了！！！
+                    </br>
+                    </br>
+                      PS. 这里建议您先修改配置文件名称，再输入托管地址进行更新操作。<a href="https://warpbkvdc68yyt.stc-cloudserver.com/auth/register?code=gzI5"> 推荐机场</a>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+            </div>
+            <footer>        
+                <p> &copy;<a href="https://weibo.com/hackl0us">@Hackl0us</a>.<a href="https://weibo.com/haxck"> 美工</a>.<a href="https://github.com/tindy2013/subconverter"> API源码</a>.<a>@NicoNewBeee</a></p>
+            </footer> 
+            </div>
+        </form>      
+    </div>            
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

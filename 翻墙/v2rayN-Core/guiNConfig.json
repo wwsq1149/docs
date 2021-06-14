@@ -1,0 +1,382 @@
+{
+  "inbound": [
+    {
+      "localPort": 10808,
+      "protocol": "socks",
+      "udpEnabled": true,
+      "sniffingEnabled": true
+    }
+  ],
+  "logEnabled": false,
+  "loglevel": "warning",
+  "index": 3,
+  "vmess": [
+    {
+      "configVersion": 2,
+      "address": "104.19.110.129",
+      "port": 443,
+      "id": "3c4ac1a2-13dc-6e99-551f-e4d6d930c3f8",
+      "alterId": 0,
+      "security": "auto",
+      "network": "ws",
+      "remarks": "heroku",
+      "headerType": "none",
+      "requestHost": "tight-brook-cecd.wwsq.workers.dev",
+      "path": "/",
+      "streamSecurity": "tls",
+      "allowInsecure": "false",
+      "configType": 1,
+      "testResult": " 0.5 M/s",
+      "subid": "",
+      "flow": "",
+      "sni": ""
+    },
+    {
+      "configVersion": 2,
+      "address": "104.19.110.129",
+      "port": 443,
+      "id": "00574664-e150-4b31-8032-c2b558aaccd2",
+      "alterId": 0,
+      "security": "auto",
+      "network": "ws",
+      "remarks": "heroku1",
+      "headerType": "none",
+      "requestHost": "nameless-heart-33e0.wwsq.workers.dev",
+      "path": "/",
+      "streamSecurity": "tls",
+      "allowInsecure": "false",
+      "configType": 1,
+      "testResult": " 2.4 M/s",
+      "subid": "",
+      "flow": "",
+      "sni": ""
+    },
+    {
+      "configVersion": 2,
+      "address": "104.19.110.129",
+      "port": 443,
+      "id": "411d57c6-a947-4a63-bb1f-df09186428bd",
+      "alterId": 0,
+      "security": "auto",
+      "network": "ws",
+      "remarks": "heroku2",
+      "headerType": "none",
+      "requestHost": "curly-tooth-75aa.wwsq.workers.dev",
+      "path": "/",
+      "streamSecurity": "tls",
+      "allowInsecure": "false",
+      "configType": 1,
+      "testResult": " 2.5 M/s",
+      "subid": "",
+      "flow": "",
+      "sni": ""
+    },
+    {
+      "configVersion": 2,
+      "address": "104.19.110.129",
+      "port": 443,
+      "id": "8f5176f2-dab4-4035-9a85-a9bd8d20b92c",
+      "alterId": 0,
+      "security": "auto",
+      "network": "ws",
+      "remarks": "wwsqus",
+      "headerType": "none",
+      "requestHost": "us.wwsq.workers.dev",
+      "path": "/",
+      "streamSecurity": "tls",
+      "allowInsecure": "false",
+      "configType": 1,
+      "testResult": " 0.1 M/s",
+      "subid": "",
+      "flow": "",
+      "sni": ""
+    },
+    {
+      "configVersion": 2,
+      "address": "104.19.110.129",
+      "port": 443,
+      "id": "876d265a-5805-41ea-856a-bdcdd40d00a1",
+      "alterId": 0,
+      "security": "auto",
+      "network": "ws",
+      "remarks": "isx.yt-01",
+      "headerType": "none",
+      "requestHost": "winter-shape-512e.wwsq.workers.dev",
+      "path": "/ray",
+      "streamSecurity": "tls",
+      "allowInsecure": "false",
+      "configType": 1,
+      "testResult": "",
+      "subid": "",
+      "flow": "",
+      "sni": ""
+    },
+    {
+      "configVersion": 2,
+      "address": "v2us02.isxa.top",
+      "port": 443,
+      "id": "fb0ca627-1df0-4269-9a3e-4e4f0de44b65",
+      "alterId": 0,
+      "security": "auto",
+      "network": "ws",
+      "remarks": "isx.yt-02",
+      "headerType": "none",
+      "requestHost": "",
+      "path": "/ray",
+      "streamSecurity": "tls",
+      "allowInsecure": "False",
+      "configType": 1,
+      "testResult": "",
+      "subid": "",
+      "flow": "",
+      "sni": ""
+    },
+    {
+      "configVersion": 2,
+      "address": "v2us03.isxa.top",
+      "port": 443,
+      "id": "dcd1a6b1-4480-4125-aacc-f4b84a432aea",
+      "alterId": 0,
+      "security": "auto",
+      "network": "ws",
+      "remarks": "isx.yt-03",
+      "headerType": "none",
+      "requestHost": "",
+      "path": "/ray",
+      "streamSecurity": "tls",
+      "allowInsecure": "False",
+      "configType": 1,
+      "testResult": "",
+      "subid": "",
+      "flow": "",
+      "sni": ""
+    },
+    {
+      "configVersion": 2,
+      "address": "104.19.110.129",
+      "port": 443,
+      "id": "cdfc9226-c59b-2df2-ba76-5651d50db457",
+      "alterId": 0,
+      "security": "auto",
+      "network": "ws",
+      "remarks": "[free-ss.site]www.kernels.bid",
+      "headerType": "none",
+      "requestHost": "winter-shape-512e.wwsq.workers.dev",
+      "path": "/ws",
+      "streamSecurity": "tls",
+      "allowInsecure": "false",
+      "configType": 1,
+      "testResult": "",
+      "subid": "",
+      "flow": "",
+      "sni": ""
+    },
+    {
+      "configVersion": 2,
+      "address": "www.kernels.bid",
+      "port": 80,
+      "id": "0300f96d-8a8c-237a-3ba4-2efd36d790dc",
+      "alterId": 0,
+      "security": "auto",
+      "network": "ws",
+      "remarks": "[free-ss.site]www.kernels.bid",
+      "headerType": "none",
+      "requestHost": "",
+      "path": "/ws",
+      "streamSecurity": "none",
+      "allowInsecure": "False",
+      "configType": 1,
+      "testResult": "",
+      "subid": "",
+      "flow": "",
+      "sni": ""
+    },
+    {
+      "configVersion": 2,
+      "address": "104.19.110.129",
+      "port": 55251,
+      "id": "270b97bd-3a59-4936-87f8-6c5b76cc8dcb",
+      "alterId": 1,
+      "security": "auto",
+      "network": "tcp",
+      "remarks": "freev2.org",
+      "headerType": "none",
+      "requestHost": "winter-shape-512e.wwsq.workers.dev",
+      "path": "",
+      "streamSecurity": "",
+      "allowInsecure": "false",
+      "configType": 1,
+      "testResult": "",
+      "subid": "",
+      "flow": "",
+      "sni": ""
+    }
+  ],
+  "muxEnabled": false,
+  "kcpItem": {
+    "mtu": 1350,
+    "tti": 50,
+    "uplinkCapacity": 12,
+    "downlinkCapacity": 100,
+    "congestion": false,
+    "readBufferSize": 2,
+    "writeBufferSize": 2
+  },
+  "sysProxyType": 1,
+  "speedTestUrl": "http://cachefly.cachefly.net/10mb.test",
+  "speedPingTestUrl": "https://www.google.com/generate_204",
+  "allowLANConn": false,
+  "enableStatistics": true,
+  "keepOlderDedupl": false,
+  "statisticsFreshRate": 2000,
+  "remoteDNS": "",
+  "defAllowInsecure": false,
+  "subItem": [],
+  "uiItem": {
+    "mainSize": "968, 632",
+    "mainLvColWidth": {
+      "def": 30,
+      "configType": 80,
+      "remarks": 100,
+      "address": 173,
+      "port": 50,
+      "security": 90,
+      "network": 70,
+      "subRemarks": 50,
+      "testResult": 85,
+      "todayDown": 70,
+      "todayUp": 70,
+      "totalDown": 70,
+      "totalUp": 70
+    }
+  },
+  "domainStrategy": "IPIfNonMatch",
+  "routingIndex": 0,
+  "routings": [
+    {
+      "remarks": "全局(Global)",
+      "url": "",
+      "rules": [
+        {
+          "type": null,
+          "port": "0-65535",
+          "inboundTag": null,
+          "outboundTag": "proxy",
+          "ip": null,
+          "domain": null,
+          "protocol": null
+        }
+      ],
+      "enabled": true,
+      "locked": false
+    },
+    {
+      "remarks": "绕过大陆(Whitelist)",
+      "url": "",
+      "rules": [
+        {
+          "type": null,
+          "port": null,
+          "inboundTag": null,
+          "outboundTag": "direct",
+          "ip": null,
+          "domain": [
+            "domain:example-example.com",
+            "domain:example-example2.com"
+          ],
+          "protocol": null
+        },
+        {
+          "type": null,
+          "port": null,
+          "inboundTag": null,
+          "outboundTag": "block",
+          "ip": null,
+          "domain": [
+            "geosite:category-ads-all"
+          ],
+          "protocol": null
+        },
+        {
+          "type": null,
+          "port": null,
+          "inboundTag": null,
+          "outboundTag": "direct",
+          "ip": null,
+          "domain": [
+            "geosite:cn"
+          ],
+          "protocol": null
+        },
+        {
+          "type": null,
+          "port": null,
+          "inboundTag": null,
+          "outboundTag": "direct",
+          "ip": [
+            "geoip:private",
+            "geoip:cn"
+          ],
+          "domain": null,
+          "protocol": null
+        },
+        {
+          "type": null,
+          "port": "0-65535",
+          "inboundTag": null,
+          "outboundTag": "proxy",
+          "ip": null,
+          "domain": null,
+          "protocol": null
+        }
+      ],
+      "enabled": true,
+      "locked": false
+    },
+    {
+      "remarks": "locked",
+      "url": "",
+      "rules": [
+        {
+          "type": null,
+          "port": null,
+          "inboundTag": null,
+          "outboundTag": "proxy",
+          "ip": null,
+          "domain": [
+            "geosite:google"
+          ],
+          "protocol": null
+        },
+        {
+          "type": null,
+          "port": null,
+          "inboundTag": null,
+          "outboundTag": "direct",
+          "ip": null,
+          "domain": [
+            "domain:example-example.com",
+            "domain:example-example2.com"
+          ],
+          "protocol": null
+        },
+        {
+          "type": null,
+          "port": null,
+          "inboundTag": null,
+          "outboundTag": "block",
+          "ip": null,
+          "domain": [
+            "geosite:category-ads-all"
+          ],
+          "protocol": null
+        }
+      ],
+      "enabled": true,
+      "locked": true
+    }
+  ],
+  "enableRoutingAdvanced": false,
+  "coreType": 1,
+  "ignoreGeoUpdateCore": false
+}

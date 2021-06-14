@@ -1,0 +1,1 @@
+taskkill /IM subconverter.exe >NUL 2>NUL

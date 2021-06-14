@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Tue, 25 May 2021 16:22:40 GMT
+Content-Type: application/octet-stream; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: WHMCSy551iLvnhYt7=oat3d50fn27kn1q6fngnce4q8r; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000
+X-Cache: MISS
+Cache-Control: no-cache
+

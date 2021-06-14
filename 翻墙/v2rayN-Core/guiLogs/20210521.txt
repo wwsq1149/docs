@@ -1,0 +1,91 @@
+--------------------------------info[06:53:05]--------------------------------
+System.Exception: v2rayN start up v2rayN - V4.17 - 2021/05/15
+
+ 
+--------------------------------操作超时[06:56:06]--------------------------------
+System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 v2rayN.Handler.SpeedtestHandler.GetRealPingTime(String url, WebProxy webProxy, Int32& responseTime)
+
+ 
+--------------------------------Base64Decode[09:35:21]--------------------------------
+System.FormatException: 输入的不是有效的 Base-64 字符串，因为它包含非 Base-64 字符、两个以上的填充字符，或者填充字符间包含非法字符。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 v2rayN.Utils.Base64Decode(String plainText)
+
+ 
+--------------------------------info[12:12:28]--------------------------------
+System.Exception: v2rayN start up v2rayN - V4.17 - 2021/05/15
+
+ 
+--------------------------------2021/05/21 12:13:21 Using default config:  D:\鐢ㄦ埛鏂囦欢\涓嬭浇\v2rayN-Core\config.json
+panic: Calling Domain() on an IPv4Address.
+
+goroutine 1 [running]:
+github.com/xtls/xray-core/common/net.ipv4Address.Domain(...)
+	github.com/xtls/xray-core/common/net/address.go:132
+github.com/xtls/xray-core/transport/internet/tcp.ListenTCP(0x10e6e2c, 0x12512058, 0x10e786c, 0x13144584, 0x12520000, 0x131501e0, 0x131297f0, 0x8, 0x1f10088, 0x0, ...)
+	github.com/xtls/xray-core/transport/internet/tcp/hub.go:47 +0xc3
+github.com/xtls/xray-core/transport/internet.ListenTCP(0x10e6e2c, 0x12512058, 0x10e786c, 0x13144584, 0x1560000, 0x131501e0, 0x131297f0, 0x10e3020, 0x131507b0, 0x0, ...)
+	github.com/xtls/xray-core/transport/internet/tcp_hub.go:73 +0x1e1
+github.com/xtls/xray-core/app/proxyman/inbound.(*tcpWorker).Start(0x124b6af0, 0x1251a408, 0x12623d00)
+	github.com/xtls/xray-core/app/proxyman/inbound/worker.go:120 +0x89
+github.com/xtls/xray-core/app/proxyman/inbound.(*AlwaysOnInboundHandler).Start(0x1314b5e0, 0x0, 0x0)
+	github.com/xtls/xray-core/app/proxyman/inbound/always.go:153 +0x52
+github.com/xtls/xray-core/app/proxyman/inbound.(*Manager).Start(0x124d8180, 0x0, 0x0)
+	github.com/xtls/xray-core/app/proxyman/inbound/inbound.go:100 +0xbb
+github.com/xtls/xray-core/core.(*Instance).Start(0x124d80f0, 0x0, 0x0)
+	github.com/xtls/xray-core/core/xray.go:347 +0x9d
+main.executeRun(0x159e0c0, 0x12511bc8, 0x0, 0x0)
+	github.com/xtls/xray-core/main/run.go:78 +0xf4
+github.com/xtls/xray-core/main/commands/base.Execute()
+	github.com/xtls/xray-core/main/commands/base/execute.go:64 +0x1e1
+main.main()
+	github.com/xtls/xray-core/main/main.go:22 +0x12c
+[12:13:21]--------------------------------
+System.Exception: 2021/05/21 12:13:21 Using default config:  D:\鐢ㄦ埛鏂囦欢\涓嬭浇\v2rayN-Core\config.json
+panic: Calling Domain() on an IPv4Address.
+
+goroutine 1 [running]:
+github.com/xtls/xray-core/common/net.ipv4Address.Domain(...)
+	github.com/xtls/xray-core/common/net/address.go:132
+github.com/xtls/xray-core/transport/internet/tcp.ListenTCP(0x10e6e2c, 0x12512058, 0x10e786c, 0x13144584, 0x12520000, 0x131501e0, 0x131297f0, 0x8, 0x1f10088, 0x0, ...)
+	github.com/xtls/xray-core/transport/internet/tcp/hub.go:47 +0xc3
+github.com/xtls/xray-core/transport/internet.ListenTCP(0x10e6e2c, 0x12512058, 0x10e786c, 0x13144584, 0x1560000, 0x131501e0, 0x131297f0, 0x10e3020, 0x131507b0, 0x0, ...)
+	github.com/xtls/xray-core/transport/internet/tcp_hub.go:73 +0x1e1
+github.com/xtls/xray-core/app/proxyman/inbound.(*tcpWorker).Start(0x124b6af0, 0x1251a408, 0x12623d00)
+	github.com/xtls/xray-core/app/proxyman/inbound/worker.go:120 +0x89
+github.com/xtls/xray-core/app/proxyman/inbound.(*AlwaysOnInboundHandler).Start(0x1314b5e0, 0x0, 0x0)
+	github.com/xtls/xray-core/app/proxyman/inbound/always.go:153 +0x52
+github.com/xtls/xray-core/app/proxyman/inbound.(*Manager).Start(0x124d8180, 0x0, 0x0)
+	github.com/xtls/xray-core/app/proxyman/inbound/inbound.go:100 +0xbb
+github.com/xtls/xray-core/core.(*Instance).Start(0x124d80f0, 0x0, 0x0)
+	github.com/xtls/xray-core/core/xray.go:347 +0x9d
+main.executeRun(0x159e0c0, 0x12511bc8, 0x0, 0x0)
+	github.com/xtls/xray-core/main/run.go:78 +0xf4
+github.com/xtls/xray-core/main/commands/base.Execute()
+	github.com/xtls/xray-core/main/commands/base/execute.go:64 +0x1e1
+main.main()
+	github.com/xtls/xray-core/main/main.go:22 +0x12c
+
+   在 v2rayN.Handler.V2rayHandler.V2rayStart()
+
+ 
+--------------------------------进程已退出，因此无法获得所请求的信息。[12:13:24]--------------------------------
+System.InvalidOperationException: 进程已退出，因此无法获得所请求的信息。
+   在 System.Diagnostics.Process.EnsureState(State state)
+   在 System.Diagnostics.Process.get_MainWindowHandle()
+   在 System.Diagnostics.Process.CloseMainWindow()
+   在 v2rayN.Handler.V2rayHandler.KillProcess(Process p)
+
+ 
+--------------------------------info[12:13:25]--------------------------------
+System.Exception: v2rayN start up v2rayN - V4.17 - 2021/05/15
+
+ 
+--------------------------------info[15:05:19]--------------------------------
+System.Exception: v2rayN start up v2rayN - V4.17 - 2021/05/15
+
+ 

@@ -1,0 +1,1 @@
+CreateObject("WScript.Shell").Run "clash-win64 -d .\Profile -f .\Profile\Tong.yaml",0

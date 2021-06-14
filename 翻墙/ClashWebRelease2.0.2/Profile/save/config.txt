@@ -1,0 +1,1 @@
+GLOBAL=DIRECT@%F0%9F%8E%B5%20Netease%20Music=网易云解锁（本地）@

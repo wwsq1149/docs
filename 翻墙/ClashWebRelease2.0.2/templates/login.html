@@ -1,0 +1,79 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>❤️ ClashWeb 控制台 ️️❤️</title>
+    <link href="/static/css/style.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>  
+    <div class="container" style="width: 30rem;">
+            <header>
+                <h1>🚀 ClashWeb 控制台 🚁</h1>
+            </header>
+            <!-- Proxy tools -->
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <span>{{ message }}</span>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                {% endfor %}
+            {% endif %}
+            {% endwith %} 
+            <script type="text/javascript">
+                function traffic()
+                {
+                    var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
+                    httpRequest.open('GET', 'http://127.0.0.1:9090/traffic', true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+                    httpRequest.send();//第三步：发送请求  将请求参数写在URL中
+                    httpRequest.onreadystatechange = function () {
+                        if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                        }
+                        var up = JSON.parse(httpRequest.response)['up'];
+                        var dowm = JSON.parse(httpRequest.response)['down'];
+                        document.getElementById("traffic").innerHTML = '   下载：'+formatBytes(dowm)+' 上传：'+formatBytes(up)
+                        httpRequest.abort();
+                    }
+                    setTimeout("traffic()",1000);
+                }
+                function formatBytes(bytes) {
+                    if(bytes < 1024) return bytes + " B";
+                    else if(bytes < 1048576) return(bytes / 1024).toFixed(2) + " KB";
+                    else if(bytes < 1073741824) return(bytes / 1048576).toFixed(2) + " MB";
+                    else return(bytes / 1073741824).toFixed(2) + " GB";
+                }
+                </script>
+        <form method="POST" name = "form1">
+            <div id="traffic" class="card">
+                <script type="text/javascript">traffic();</script>
+            </div>
+            <div class="card"  >          
+                <textarea  name = "clash" cols="70" rows="5" id="custom" style="display:none"" >{{ clash  }}</textarea>  
+                <textarea  name = "sysproxy" cols="70" rows="5" id="custom" style="display:none"" >{{ sysproxy  }}</textarea>                 
+                    </br>  
+                    <input  type="submit" class="btn btn-primary btn-lg" name= 'submit' value = "切换 节点""/>                                 
+                    </br>                
+                <input  type="submit" class="btn btn-primary btn-lg" name= 'submit' value = "订阅  管理""/>
+                    </br>
+            </div> 
+            <footer style="width: 30rem;">
+                <p> &copy;<a href="https://t.me/niconewbeeeapi">API通知频道</a>——<a href="https://t.me/niconewbeeeapi/134"> 打赏支持开发</a>——<a href="https://github.com/lzdnico/subweb"> Web源码</a></p>
+            </footer>  
+    </div>     
+    </div>                     
+        </form>  
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+</body>
+</html>

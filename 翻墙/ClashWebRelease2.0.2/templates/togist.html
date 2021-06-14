@@ -1,0 +1,104 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>❤️ Clash 控制台 ️️❤️</title>
+    <link href="/static/css/style.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>  
+    <div class="container" style="width: 30rem;">
+            <header>
+                <h1>🚀 Qx/Loon/Surge 配置文件gist托管 🚁</h1>
+            </header>
+
+            <!-- Proxy tools -->
+        <form method="POST" name = "form1">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <span>{{ message }}</span>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <div class="card"  > 
+                </br>
+                <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Github邮箱</label>
+                      <input class="form-control" name='email' >
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">密码</label>
+                      <input class="form-control" name='passwd' >
+                    </div>
+                    <form>
+                        <div class="form-group">
+                          <label for="exampleFormControlFile1">选择文件</label>
+                          <input type="file" name= 'file' class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                      </form>
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1">输入gist地址</label>
+                        <input class="form-control" name='gist' >
+                      </div>
+                    <input  type="submit" class="btn btn-primary" name= 'submit' value = "一键上传到gist""/>
+                    </br>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">使用说明</button>  
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">togist使用说明</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                      本地脚本，请放心使用！
+                      首先填入github邮箱，密码
+                    </br>
+                    </br>
+                      选择文件，目前仅支持上传Profiles文件下的配置文件。推荐您将要上传的qx/loon/surge等配置文件命名为qx.config/loon.config/surge.config
+                    </br>
+                    </br>
+                     在输入gist地址框里填入你想上传的gist私有库！  请注意不要上传到公用库。gist地址的形式应该为：
+                    </br>
+                    </br>
+                      https://gist.github.com/nico/sahdhhshadsodhashdioashh6798
+                    </br>
+                    </br>
+                      PS. <a href="https://stc-beta4.com/auth/register?code=gzI5"> 推荐机场</a>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>                               
+            </div>
+            <footer>        
+                <p> &copy;<a href="https://weibo.com/hackl0us">@Hackl0us</a>.<a href="https://weibo.com/haxck"> 美工</a>.<a href="https://github.com/tindy2013/subconverter"> API源码</a>.<a>@NicoNewBeee</a></p>
+            </footer> 
+            </div>
+        </form>      
+    </div>            
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

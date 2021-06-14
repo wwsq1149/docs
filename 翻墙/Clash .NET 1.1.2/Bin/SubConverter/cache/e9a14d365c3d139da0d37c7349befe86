@@ -1,0 +1,361 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+bind-address: '*'
+mode: rule
+log-level: info
+ipv6: true
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:53
+  enhanced-mode: redir-host
+  nameserver:
+    - 117.50.10.10
+    - 119.29.29.29
+    - 114.114.114.114
+    - 223.5.5.5
+    - 223.6.6.6
+  Auto:
+    - tls://1.1.1.1:853
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+    
+proxies:
+- { name: Hong Kong AIA 01, type: ss,server: 162.14.20.120, port: 10086, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Hong Kong AIA 02, type: ss,server: 162.14.20.120, port: 10087, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Hong Kong AIA 03, type: ss,server: 162.14.20.120, port: 10088, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Hong Kong AIA 04, type: ss,server: 162.14.20.120, port: 10089, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Hong Kong AIA 05, type: ss,server: 162.14.20.120, port: 10090, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Hong Kong AIA 06, type: ss,server: 162.14.20.120, port: 10091, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Singapore AIA 01, type: ss,server: 162.14.20.120, port: 10092, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Singapore AIA 02, type: ss,server: 162.14.20.120, port: 10093, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Singapore AIA 03, type: ss,server: 162.14.20.120, port: 10094, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Japan AIA 01, type: ss,server: 162.14.20.120, port: 10095, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Japan AIA 02, type: ss,server: 162.14.20.120, port: 10096, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Japan AIA 03, type: ss,server: 162.14.20.120, port: 10097, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Japan AIA 04, type: ss,server: 162.14.20.120, port: 10098, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Taiwan AIA 01, type: ss,server: 162.14.20.120, port: 10099, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Taiwan AIA 02, type: ss,server: 162.14.20.120, port: 10100, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Hong Kong Relay 01, type: ss,server: 183.236.97.42, port: 10010, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Hong Kong Relay 02, type: ss,server: 183.236.97.42, port: 10011, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Hong Kong Relay 03, type: ss,server: 183.236.97.42, port: 10012, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Hong Kong Relay 04, type: ss,server: 183.236.97.42, port: 10013, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Singapore Relay 01, type: ss,server: 183.236.97.42, port: 10014, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: Singapore Relay 02, type: ss,server: 183.236.97.42, port: 10015, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: USA Relay 01, type: ss,server: 183.236.97.42, port: 10016, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+- { name: USA Relay 02, type: ss,server: 183.236.97.42, port: 10017, password: E99801F9-3C58-ED20-D924-237A17657F05, cipher: aes-256-gcm, udp: true}
+
+
+proxy-groups:
+
+  # 套餐状态
+  - name: "套餐状态"
+    type: select
+    proxies:
+      - ⛽ 剩余流量:127G
+      - 📅 到期时间:2021-06-25
+ 
+  # 主力节点选择
+  - name: "主力节点"
+    type: select
+    proxies:
+      - 自动选择
+      - Hong Kong AIA 01
+      - Hong Kong AIA 02
+      - Hong Kong AIA 03
+      - Hong Kong AIA 04
+      - Hong Kong AIA 05
+      - Hong Kong AIA 06
+      - Singapore AIA 01
+      - Singapore AIA 02
+      - Singapore AIA 03
+      - Japan AIA 01
+      - Japan AIA 02
+      - Japan AIA 03
+      - Japan AIA 04
+      - Taiwan AIA 01
+      - Taiwan AIA 02
+      - Hong Kong Relay 01
+      - Hong Kong Relay 02
+      - Hong Kong Relay 03
+      - Hong Kong Relay 04
+      - Singapore Relay 01
+      - Singapore Relay 02
+      - USA Relay 01
+      - USA Relay 02
+
+
+  - name: "广告屏蔽"
+    type: select
+    proxies:
+      - 开启屏蔽
+      - 关闭屏蔽
+
+
+  - name: "苹果服务"
+    type: select
+    proxies:
+      - 主力节点
+      - 自动选择
+      - Hong Kong AIA 01
+      - Hong Kong AIA 02
+      - Hong Kong AIA 03
+      - Hong Kong AIA 04
+      - Hong Kong AIA 05
+      - Hong Kong AIA 06
+      - Singapore AIA 01
+      - Singapore AIA 02
+      - Singapore AIA 03
+      - Japan AIA 01
+      - Japan AIA 02
+      - Japan AIA 03
+      - Japan AIA 04
+      - Taiwan AIA 01
+      - Taiwan AIA 02
+      - Hong Kong Relay 01
+      - Hong Kong Relay 02
+      - Hong Kong Relay 03
+      - Hong Kong Relay 04
+      - Singapore Relay 01
+      - Singapore Relay 02
+      - USA Relay 01
+      - USA Relay 02
+
+      - 直接连接
+
+  - name: "谷歌服务"
+    type: select
+    proxies:
+      - 主力节点
+      - 自动选择
+      - Hong Kong AIA 01
+      - Hong Kong AIA 02
+      - Hong Kong AIA 03
+      - Hong Kong AIA 04
+      - Hong Kong AIA 05
+      - Hong Kong AIA 06
+      - Singapore AIA 01
+      - Singapore AIA 02
+      - Singapore AIA 03
+      - Japan AIA 01
+      - Japan AIA 02
+      - Japan AIA 03
+      - Japan AIA 04
+      - Taiwan AIA 01
+      - Taiwan AIA 02
+      - Hong Kong Relay 01
+      - Hong Kong Relay 02
+      - Hong Kong Relay 03
+      - Hong Kong Relay 04
+      - Singapore Relay 01
+      - Singapore Relay 02
+      - USA Relay 01
+      - USA Relay 02
+
+      - 直接连接
+
+  - name: "被墙域名"
+    type: select
+    proxies:
+      - 主力节点
+      - 自动选择
+      - Hong Kong AIA 01
+      - Hong Kong AIA 02
+      - Hong Kong AIA 03
+      - Hong Kong AIA 04
+      - Hong Kong AIA 05
+      - Hong Kong AIA 06
+      - Singapore AIA 01
+      - Singapore AIA 02
+      - Singapore AIA 03
+      - Japan AIA 01
+      - Japan AIA 02
+      - Japan AIA 03
+      - Japan AIA 04
+      - Taiwan AIA 01
+      - Taiwan AIA 02
+      - Hong Kong Relay 01
+      - Hong Kong Relay 02
+      - Hong Kong Relay 03
+      - Hong Kong Relay 04
+      - Singapore Relay 01
+      - Singapore Relay 02
+      - USA Relay 01
+      - USA Relay 02
+
+      - 直接连接
+      
+  - name: "中国大陆"
+    type: select
+    proxies:
+      - 直接连接
+      - 主力节点
+      - 自动选择
+      - Hong Kong AIA 01
+      - Hong Kong AIA 02
+      - Hong Kong AIA 03
+      - Hong Kong AIA 04
+      - Hong Kong AIA 05
+      - Hong Kong AIA 06
+      - Singapore AIA 01
+      - Singapore AIA 02
+      - Singapore AIA 03
+      - Japan AIA 01
+      - Japan AIA 02
+      - Japan AIA 03
+      - Japan AIA 04
+      - Taiwan AIA 01
+      - Taiwan AIA 02
+      - Hong Kong Relay 01
+      - Hong Kong Relay 02
+      - Hong Kong Relay 03
+      - Hong Kong Relay 04
+      - Singapore Relay 01
+      - Singapore Relay 02
+      - USA Relay 01
+      - USA Relay 02
+
+
+  - name: "自动选择"
+    type: fallback
+    proxies:
+      - Hong Kong AIA 01
+      - Hong Kong AIA 02
+      - Hong Kong AIA 03
+      - Hong Kong AIA 04
+      - Hong Kong AIA 05
+      - Hong Kong AIA 06
+      - Singapore AIA 01
+      - Singapore AIA 02
+      - Singapore AIA 03
+      - Japan AIA 01
+      - Japan AIA 02
+      - Japan AIA 03
+      - Japan AIA 04
+      - Taiwan AIA 01
+      - Taiwan AIA 02
+      - Hong Kong Relay 01
+      - Hong Kong Relay 02
+      - Hong Kong Relay 03
+      - Hong Kong Relay 04
+      - Singapore Relay 01
+      - Singapore Relay 02
+      - USA Relay 01
+      - USA Relay 02
+
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+
+  - name: "直接连接"
+    type: select
+    proxies:
+      - DIRECT
+
+  - name: "开启屏蔽"
+    type: select
+    proxies:
+      - REJECT
+
+  - name: "关闭屏蔽"
+    type: select
+    proxies:
+      - DIRECT
+      
+  - name: "⛽ 剩余流量:127G"
+    type: select
+    proxies:
+      - DIRECT
+
+  - name: "📅 到期时间:2021-06-25"
+    type: select
+    proxies:
+      - DIRECT
+ 
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+
+  icloud:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+
+  apple:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+    path: ./ruleset/apple.yaml
+    interval: 86400
+
+  google:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    path: ./ruleset/google.yaml
+    interval: 86400
+
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+
+  direct:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+ 
+
+rules:
+  - PROCESS-NAME,v2ray,DIRECT
+  - PROCESS-NAME,Surge%203,DIRECT
+  - PROCESS-NAME,ss-local,DIRECT
+  - PROCESS-NAME,privoxy,DIRECT
+  - PROCESS-NAME,trojan,DIRECT
+  - PROCESS-NAME,trojan-go,DIRECT
+  - PROCESS-NAME,naive,DIRECT
+  - PROCESS-NAME,Thunder,DIRECT
+  - PROCESS-NAME,DownloadService,DIRECT
+  - PROCESS-NAME,qBittorrent,DIRECT
+  - PROCESS-NAME,Transmission,DIRECT
+  - PROCESS-NAME,fdm,DIRECT
+  - PROCESS-NAME,aria2c,DIRECT
+  - PROCESS-NAME,Folx,DIRECT
+  - PROCESS-NAME,NetTransport,DIRECT
+  - PROCESS-NAME,uTorrent,DIRECT
+  - PROCESS-NAME,WebTorrent,DIRECT
+  - RULE-SET,reject,广告屏蔽
+  - RULE-SET,icloud,苹果服务
+  - RULE-SET,apple,苹果服务
+  - RULE-SET,google,谷歌服务
+  - RULE-SET,proxy,被墙域名
+  - RULE-SET,cncidr,中国大陆
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,lancidr,DIRECT,no-resolve
+  - MATCH,主力节点

@@ -1,0 +1,1 @@
+CreateObject("WScript.Shell").Run "startup1.bat",1

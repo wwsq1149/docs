@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>❤️ ClashWeb 控制台 ️️❤️</title>
+    <link href="/static/css/style.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>  
+    <div class="container">
+            <header>
+                <h1>🚀 Clash 控制台 🚁</h1>
+            </header>
+
+            <!-- Proxy tools -->
+        <form method="POST" name = "form1">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <span>{{ message }}</span>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                {% endfor %}
+            {% endif %}
+            {% endwith %} 
+            <textarea  name = "file" cols="70" rows="5" id="custom" value="{{ url_for('static', filename=file)}}" style="display:none"" >{{ file  }}</textarea>
+            <input  type="submit" class="btn btn-primary" name= 'submit' value = "返回上页""/>
+            <input  type="submit" class="btn btn-primary" name= 'submit' value = "返回主页""/>
+            <input  type="submit" class="btn btn-primary" name= 'submit' value = "修改订阅/修改配置""/>
+            <div class="card" >
+                <h4>订阅地址</h4>
+                <textarea  name = "sub" cols="70" rows="5" id="custom" placeholder="配置文件内容"" >{{ sub  }}</textarea>  
+                <h4>配置文件</h4>
+                <textarea  name = "content" cols="70" rows="50" id="custom" placeholder="配置文件内容"" >{{ content  }}</textarea>  
+            </div>
+                          
+        </form>          
+        <footer>        
+        <p> &copy;<a href="https://weibo.com/hackl0us">@Hackl0us</a>.<a href="https://weibo.com/haxck"> 美工</a>.<a href="https://github.com/tindy2013/subconverter"> API源码</a>.<a>@NicoNewBeee</a></p>
+        </footer>
+    </div>
+</body>
+</html>
